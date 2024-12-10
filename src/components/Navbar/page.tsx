@@ -11,6 +11,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 
+
+
 const Navbar = () => {
   return (
     <nav className="bg-white text-black ">
@@ -28,16 +30,16 @@ const Navbar = () => {
 
         {/* Links */}
         <div className="hidden md:flex gap-12">
-          <Link href="#home" className="hover:text-gray-400 text-[16px] font-poppins">
+          <Link href="/" className="hover:text-gray-400 text-[16px] font-poppins">
             Home
           </Link>
-          <Link href="#" className="hover:text-gray-400 text-[16px]">
-            About
+          <Link href="/Shop" className="hover:text-gray-400 text-[16px]">
+            Shop
           </Link>
-          <Link href="#" className="hover:text-gray-400 text-[16px]">
-            Services
+          <Link href="/Blog" className="hover:text-gray-400 text-[16px]">
+            Blog
           </Link>
-          <Link href="#contact" className="hover:text-gray-400 text-[16px]">
+          <Link href="/ContactPage" className="hover:text-gray-400 text-[16px]">
             Contact
           </Link>
         </div>
@@ -45,13 +47,77 @@ const Navbar = () => {
         {/* Icons */}
         <div className="hidden md:flex gap-6">
           <Image height={10} width={10} src="/images/usericon.png" alt="User" className="w-[23px] h-[18px]" />
-          <Search className="w-[28px] h-[28px] cursor-pointer" />
-          <ShoppingCart className="w-[28px] h-[28px] cursor-pointer" />
-          <Heart className="w-[28px] h-[28px] cursor-pointer" />
+          <Search className="w-[28px] h-[28px] cursor-pointer hover:text-gray-400 text-[16px]" />
+          {/* <ShoppingCart className="w-[28px] h-[28px] cursor-pointer" /> */}
+          <Link href="/Cart">
+            <ShoppingCart className="w-[28px] h-[28px] cursor-pointer hover:text-gray-400 text-[16px]" />
+          </Link>
+          {/* <Heart className="w-[28px] h-[28px] cursor-pointer hover:text-gray-400 text-[16px]" /> */}
+          <Link href="#">
+            <Heart className="w-[28px] h-[28px] cursor-pointer hover:text-gray-400 text-[16px]" />
+          </Link>
         </div>
 
-        {/* Hamburger Menu (Mobile View) */}
+
+
         <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="outline" size="icon" className="p-2">
+                <Heart className="w-[28px] h-[28px] cursor-pointer" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="bg-white text-black">
+              <SheetHeader>
+                <SheetTitle>Wishlist</SheetTitle>
+              </SheetHeader>
+              <div className="mt-4">
+                {/* Wishlist items */}
+                <div className="flex flex-col gap-4">
+                  <div className="flex items-center justify-between border-b pb-4">
+                    <Image
+                      src="/images/b1.png"
+                      alt="Wishlist Item"
+                      width={100}
+                      height={100}
+                      className="lg:w-[100px] lg:h-[100px]  object-cover"
+                    />
+                    <div>
+                      <h3 className="text-[10px] md:text-[16px] font-poppins">Asgard Sofa</h3>
+                      <p className="text-[10px] md:text-[16px] text-[#B88E2F]"><span className='text-black'>1 X </span>Rs. 44,000</p>
+                    </div>
+                    <div><Image src="/images/cross.png"alt="Wishlist Item"
+                      width={20}
+                      height={20}
+                      className="" /></div>
+                  
+                  </div>
+
+                  <div className="flex items-center justify-between border-b pb-4">
+                    <Image
+                      src="/images/pro4.png"
+                      alt="Wishlist Item"
+                      width={100}
+                      height={100}
+                      className="lg:w-[100px] lg:h-[100x] object-cover"
+                    />
+                    <div>
+                      <h3 className="text-[10px] md:text-[16px] font-poppins">Casoliving Wood</h3>
+                      <p className="text-[10px] md:text-[16px] text-[#B88E2F] "><span className='text-black'>1 X </span>Rs. 35,000</p>
+                    </div>
+                    <div><Image src="/images/cross.png"alt="Wishlist Item"
+                      width={20}
+                      height={20}
+                      className="" /></div>
+                  </div>
+                </div>
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
+
+
+        {/* Hamburger Menu (Mobile View) */}
+        <Sheet >
           <SheetTrigger asChild>
             <Button variant="outline" size="icon" className="md:hidden">
               <Menu className="w-6 h-6" />
@@ -70,22 +136,22 @@ const Navbar = () => {
               </SheetTitle>
             </SheetHeader>
             <div className="flex flex-col items-center gap-6 mt-6">
-              <Link href="#" className="text-[20px] hover:underline">
-                Home
-              </Link>
-              <Link href="#contact" className="text-[20px] hover:underline">
-                Contact
-              </Link>
-              <Link href="#" className="text-[20px] hover:underline">
-                About
-              </Link>
-              <Link href="#" className="text-[20px] hover:underline">
-                Sign Up
-              </Link>
+            <Link href="/" className="hover:text-gray-400 text-[16px] font-poppins">
+            Home
+          </Link>
+          <Link href="/Shop" className="hover:text-gray-400 text-[16px]">
+            Shop
+          </Link>
+          <Link href="/Blog" className="hover:text-gray-400 text-[16px]">
+            Blog
+          </Link>
+          <Link href="/ContactPage" className="hover:text-gray-400 text-[16px]">
+            Contact
+          </Link>
             </div>
           </SheetContent>
         </Sheet>
-      </div>
+      
     </nav>
                  
 
@@ -94,4 +160,4 @@ const Navbar = () => {
 
 
 
-export default Navbar
+export default Navbar;

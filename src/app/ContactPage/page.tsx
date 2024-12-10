@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Feature from "../Feature/page";
+import Feature from "../../components/Feature/page";
 
 const ContactPage = () => {
   return (

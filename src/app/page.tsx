@@ -5,21 +5,31 @@ import SecPart from "@/components/SecPart/page";
 
 import Sofa from "@/app/Sofa/page";
 
-import ContactPage from "../components/ContactPage/page";
+import ContactPage from "./ContactPage/page";
+import CheckoutPage from "@/app/CheckoutPage/page";
+import Cart from "@/app/Cart/page";
+import ItemPage from "@/app/ItemPage/page";
+import ProPage from "@/app/ProPage/page";
+
+import Blog from "@/app/Blog/page";
+
 
 
 export default function Home() {
   return (
    <div>
     
-    <Hero/>
+     <Hero/>
     <SecPart/>
     <Sofa/>
     <Grido/>
-    <div className="mt-20"> <ContactPage /></div>
+    {/* <Blog/> */}
+    {/* <div className="mt-20"> <ContactPage /></div> */}
+    {/* <CheckoutPage/> */}
+     {/* <Cart/> */}
+     {/* <ItemPage/> */}
+    {/* <ProPage/> */}
     
-    
-
-   </div>
+     </div>
   );
 }
