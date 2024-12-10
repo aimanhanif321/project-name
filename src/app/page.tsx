@@ -23,12 +23,7 @@ export default function Home() {
     <SecPart/>
     <Sofa/>
     <Grido/>
-    {/* <Blog/> */}
-    {/* <div className="mt-20"> <ContactPage /></div> */}
-    {/* <CheckoutPage/> */}
-     {/* <Cart/> */}
-     {/* <ItemPage/> */}
-    {/* <ProPage/> */}
+   
     
      </div>
   );
