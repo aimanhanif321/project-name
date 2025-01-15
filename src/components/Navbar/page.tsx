@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 import { Heart, Menu, Search, ShoppingCart,} from 'lucide-react';
 import React from 'react'
 import Link from "next/link";
@@ -53,7 +62,7 @@ const Navbar = () => {
             <ShoppingCart className="w-[28px] h-[28px] cursor-pointer hover:text-gray-400 text-[16px]" />
           </Link>
           {/* <Heart className="w-[28px] h-[28px] cursor-pointer hover:text-gray-400 text-[16px]" /> */}
-          <Link href="#">
+          <Link href="/ItemPage">
             <Heart className="w-[28px] h-[28px] cursor-pointer hover:text-gray-400 text-[16px]" />
           </Link>
         </div>
@@ -116,7 +125,7 @@ const Navbar = () => {
         </div>
 
 
-        {/* Hamburger Menu (Mobile View) */}
+       {/* {small screen navbar} */}
         <Sheet >
           <SheetTrigger asChild>
             <Button variant="outline" size="icon" className="md:hidden">

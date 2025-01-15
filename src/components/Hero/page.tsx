@@ -7,7 +7,7 @@ function Hero() {
       <div
         className=' md:h-[720px] sm:h-[500px] h-[400px] bg-[url("/images/bg.png")] bg-no-repeat bg-cover bg-center flex items-center md:pr-[280px] justify-end'
       >
-        {/* Add your content here */}
+       
        <div className='w-[300px] py-5 mr-5 md:w-[643px] md:h-[443px] flex items-center justify-center ml-4 bg-[#FFF3E3]'>
         <div  className='w-auto pl-4   md:w-[561px] md:h-[344px] '>
             <p className='font-poppins text-[10px] md:text-[14px] font-[500] md:tracking-widest'>New Arrival</p>
